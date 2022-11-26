@@ -50,7 +50,7 @@ vl seg;
 int seg_len;
 
 void build_seg(vl A, int n) {
-    seg.assign(2 * n);
+    seg.resize(2 * n);
     seg_len = n;
     for(int i = n ;  i < 2*n; i++) seg[i] = A[i-n];
     for(int i = n-1; i > 0; --i) seg[i] = (seg[i<<1] + seg[i << 1|1]) % mod;
@@ -86,7 +86,6 @@ int main() {
     cin >> t;
 
     for(int ti = 1; ti <= t; ti++) {
-        
         //cout << "Case #" << ti << ": " ; 
     }
 
